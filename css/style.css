@@ -21,18 +21,15 @@ nav{
 }
 
 .navbar{
-  background-color: rgba(255, 255, 255, 0.689); /* más transparente */
-  backdrop-filter: blur(10px); /* borroso */
-  -webkit-backdrop-filter: blur(10px); /* compatibilidad Safari */
+  background-color: rgba(255, 255, 255, 0.689); 
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
   
 }
 .nav-item{
 color: white;
 }
-/* Cambiar color al hacer scroll */
-.scrolled .navbar {
-  background: rgba(0, 0, 0, 0.85) !important;
-}
+
 
 .logo{
   width: 50px;
@@ -40,7 +37,7 @@ color: white;
   margin-right: 20px;
 }
 .titulo {
-  font-size: 2rem; /* prueba con 2.5rem o 40px si lo quieres aún más grande */
+  font-size: 2rem; 
 }
 
 
@@ -51,8 +48,11 @@ color: white;
   font-weight: bold;
   padding: 12px 30px;
   border-radius: 30px;
-  font-size: 1.7rem;
   transition: all 0.3s ease-in-out;
+}
+
+.btn{
+  font-size: 1.5rem;
 }
 
 .btn-gradient:hover {
@@ -60,7 +60,7 @@ color: white;
   transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
 }
-/* Video ocupa toda la altura */
+
 .video-section {
   height: 100vh;
   position: relative;
@@ -73,7 +73,7 @@ color: white;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Hace que el video llene sin deformarse */
+  object-fit: cover; 
   z-index: -1;
 }
 
@@ -83,7 +83,7 @@ color: white;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* oscurece un poco para mejor legibilidad */
+  background: rgba(0, 0, 0, 0.4); 
   z-index: 0;
 }
 
@@ -135,18 +135,18 @@ color: white;
   transition: .6s cubic-bezier(.28,-0.03,0,.99);
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   color: #000000;
-  position: relative; /* necesario para ::before */
+  position: relative;
 }
 
-/* Fondo con opacidad */
+
 .service-card::before {
   content: "";
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  opacity: 0.5; /* ajusta la opacidad del fondo */
-  z-index: 0; /* se queda detrás del contenido */
+  opacity: 0.5; 
+  z-index: 0;
   transition: opacity 0.3s ease;
 }
 
@@ -155,7 +155,7 @@ color: white;
   flex-wrap: nowrap;
   width: 100%;
   align-items: center;
-  position: relative; /* asegura que el texto quede arriba */
+  position: relative; 
   z-index: 1;
 }
 
@@ -194,6 +194,7 @@ color: white;
   text-transform: uppercase;
   font-size: 1.2rem;
   margin: 0;
+  color: #000000;
 }
 
 /* Radio Inputs */
@@ -213,16 +214,16 @@ input:checked + label .description {
 
 /* Fondos personalizados (ahora aplicados en ::before) */
 .service-card[for="s1"]::before {
-  background-image: url('./img/web.jpg');
+  background-image: url('../img/web.jpg');
 }
 .service-card[for="s2"]::before {
-  background-image: url('./img/movil.webp');
+  background-image: url('../img/movil.webp');
 }
 .service-card[for="s3"]::before {
-  background-image: url('./img/consultoria.jpg');
+  background-image: url('../img/consultoria.jpg');
 }
 .service-card[for="s4"]::before {
-  background-image: url('./img/soporte.webp');
+  background-image: url('../img/soporte.webp');
 }
 
 
@@ -238,9 +239,9 @@ input:checked + label .description {
     
   }
     .services-container {
-    flex-direction: column;   /* cambia de horizontal a vertical */
-    height: auto;            /* deja crecer la altura según el contenido */
-    align-items: center;     /* centra las tarjetas */
+    flex-direction: column;   
+    height: auto;         
+    align-items: center;  
   }
 
   /* Altura base */
@@ -254,10 +255,10 @@ input:checked + label .description {
   border-radius: 2rem;
   margin: 0 10px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   transition: 
     width .6s cubic-bezier(.28,-0.03,0,.99),
-    height .6s cubic-bezier(.28,-0.03,0,.99); /* animación en ancho y alto */
+    height .6s cubic-bezier(.28,-0.03,0,.99); 
   box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
   color: #fff;
 }
@@ -265,7 +266,7 @@ input:checked + label .description {
 /* Expandir en ancho y alto */
 input:checked + label {
   width: 500px;
-  height: 280px; /* altura expandida */
+  height: 280px; 
 }
 
 /* Mostrar la descripción cuando se expanda */
@@ -276,17 +277,22 @@ input:checked + label .description {
 
 
   .service-card {
-    width: 90% !important;   /* que cada tarjeta ocupe casi todo el ancho */
-    margin: 10px 0;          /* espacio entre tarjetas */
+    width: 90% !important;   
+    margin: 10px 0;      
   }
 
   input:checked + label {
-    width: 100% !important; /* que al expandirse no rompa el diseño */
+    width: 100% !important; 
   }
 
   .service-card > .row > .description {
-    width: 100%; /* ajusta el texto al nuevo ancho */
+    width: 100%; 
   }
+    .service-card .description p {
+
+  width: 80%;
+  margin-bottom: 20px;
+}
 }
 @media (max-width: 575px) {
   .team-card { max-width: 90%; } 
@@ -310,5 +316,10 @@ input:checked + label .description {
   .titulo{
     font-size: 1rem;
   }
-
+  .service-card .description p {
+    height: 80%;
+  width: 80%;
+  padding: 0;
+  margin:0;
+}
 }

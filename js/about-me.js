@@ -1,12 +1,13 @@
-var swiper = new Swiper(".swiper", {
-  slidesPerView: "auto",
-  spaceBetween: 30,
-  centeredSlides: true, // 👈 Esto centra el slide activo
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: "auto", 
+  spaceBetween: 10,       
+  loop: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
+
 
 
     const boton = document.getElementById("toggleHistoria");

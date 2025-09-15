@@ -81,7 +81,15 @@ nav {
 .valores { background-image: url('../img/valores.png'); }
 
 /* SWIPER */
-.swiper { width: 80%; padding: 50px 0; }
+.swiper {
+  width: 80%;
+  padding: 50px 0;
+  margin: 0 auto; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .swiper-slide {
   width: 300px;
   height: 400px;
@@ -90,6 +98,8 @@ nav {
   align-items: center;
   transition: transform 0.3s;
 }
+
+
 .swiper-wrapper { align-items: center; }
 
 /* TEAM CARD */
@@ -117,7 +127,17 @@ nav {
   border-radius: 50%;
   background: rgba(255,255,255,0.92);
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: background 0.3s, transform 0.3s;
 }
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  background: rgba(0,0,0,0.1);
+  transform: scale(1.1);
+}
+
+.swiper-slide:hover {
+  transform: scale(1.05);
+}
+
 
 /* SERVICE CARDS */
 .service-card {
@@ -155,6 +175,7 @@ input:checked + label {
   .flip-card { height: 200px; }
   .tarjetas { flex-direction: column; align-items: center; }
   .titulo { font-size: 1rem; }
+
 }
 
 
