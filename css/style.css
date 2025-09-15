@@ -1,0 +1,314 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: rgb(255, 255, 255);
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+nav{
+    width: 100%;
+    color: white;
+    font-size: 1.2rem;
+    height: 12vh;
+    background-color: rgb(255, 0, 0);
+}
+
+.navbar{
+  background-color: rgba(255, 255, 255, 0.689); /* más transparente */
+  backdrop-filter: blur(10px); /* borroso */
+  -webkit-backdrop-filter: blur(10px); /* compatibilidad Safari */
+  
+}
+.nav-item{
+color: white;
+}
+/* Cambiar color al hacer scroll */
+.scrolled .navbar {
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+.logo{
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+.titulo {
+  font-size: 2rem; /* prueba con 2.5rem o 40px si lo quieres aún más grande */
+}
+
+
+.btn-gradient {
+  background: linear-gradient(0deg, #007bff, #00c6ff);
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.7rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+  background: linear-gradient(360deg, #0056b3, #0099cc);
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+/* Video ocupa toda la altura */
+.video-section {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Hace que el video llene sin deformarse */
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* oscurece un poco para mejor legibilidad */
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+
+
+.textoP{
+  width: 45vw;
+  font-size: 1.7rem;
+    text-shadow: 1px 1px 2px greenyellow;
+}
+.txtBienvenido{
+  font-size: 3rem;
+  text-shadow: 2px 2px 8px rgb(0, 81, 255);
+  color: rgb(255, 255, 255);
+}
+
+
+
+/* Servicios */
+
+/* Wrapper */
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.services-container {
+  height: 400px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: start;
+}
+
+/* Cards */
+.service-card {
+  width: 80px;
+  border-radius: 2rem;
+  cursor: pointer;
+  overflow: hidden;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: .6s cubic-bezier(.28,-0.03,0,.99);
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+  color: #000000;
+  position: relative; /* necesario para ::before */
+}
+
+/* Fondo con opacidad */
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* ajusta la opacidad del fondo */
+  z-index: 0; /* se queda detrás del contenido */
+  transition: opacity 0.3s ease;
+}
+
+.service-card > .row {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  position: relative; /* asegura que el texto quede arriba */
+  z-index: 1;
+}
+
+/* Icono */
+.service-card > .row > .icon {
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+/* Descripción */
+.service-card > .row > .description {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 80px;
+  width: 400px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all .3s ease;
+}
+
+.service-card .description p {
+  color: #000000;
+  padding-top: 5px;
+  font-size: 0.9rem;
+}
+
+.service-card .description h4 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Radio Inputs */
+input {
+  display: none;
+}
+
+/* Animación al expandir */
+input:checked + label {
+  width: 500px;
+}
+
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Fondos personalizados (ahora aplicados en ::before) */
+.service-card[for="s1"]::before {
+  background-image: url('./img/web.jpg');
+}
+.service-card[for="s2"]::before {
+  background-image: url('./img/movil.webp');
+}
+.service-card[for="s3"]::before {
+  background-image: url('./img/consultoria.jpg');
+}
+.service-card[for="s4"]::before {
+  background-image: url('./img/soporte.webp');
+}
+
+
+
+@media (max-width: 991px) {
+  .team-card img { height: 200px; }
+  .flip-card{
+    height: 200px;
+    width: 200px;
+  }
+    .txtBienvenido{
+    display: none;
+    
+  }
+    .services-container {
+    flex-direction: column;   /* cambia de horizontal a vertical */
+    height: auto;            /* deja crecer la altura según el contenido */
+    align-items: center;     /* centra las tarjetas */
+  }
+
+  /* Altura base */
+.service-card {
+  width: 80px;
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  transition: 
+    width .6s cubic-bezier(.28,-0.03,0,.99),
+    height .6s cubic-bezier(.28,-0.03,0,.99); /* animación en ancho y alto */
+  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+  color: #fff;
+}
+
+/* Expandir en ancho y alto */
+input:checked + label {
+  width: 500px;
+  height: 280px; /* altura expandida */
+}
+
+/* Mostrar la descripción cuando se expanda */
+input:checked + label .description {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+
+  .service-card {
+    width: 90% !important;   /* que cada tarjeta ocupe casi todo el ancho */
+    margin: 10px 0;          /* espacio entre tarjetas */
+  }
+
+  input:checked + label {
+    width: 100% !important; /* que al expandirse no rompa el diseño */
+  }
+
+  .service-card > .row > .description {
+    width: 100%; /* ajusta el texto al nuevo ancho */
+  }
+}
+@media (max-width: 575px) {
+  .team-card { max-width: 90%; } 
+  .team-card img { height: 180px; }
+  .flip-card{
+    height: 200px;
+  }
+  .tarjetas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .txtBienvenido{
+    display: none;
+    
+  }
+  .textoP{
+    font-size: 1.3rem;
+  }
+  .titulo{
+    font-size: 1rem;
+  }
+
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/about-me.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Sobre Nosotros</title>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container">
+        <img src="../img/logo.png" class="animated animate__bounce logo" alt="">
+        <a class="navbar-brand fw-bold titulo" href="#">CoderHub.run</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+            <li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#team">Equipo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- SECCIÓN NOSOTROS -->
+  <section id="about" class="nosotros-section py-5">
+    <div class="container">
+
+      <!-- Título principal -->
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Nosotros</h2>
+        <p class="text-muted">Conoce más sobre CoderHub.run</p>
+        <hr class="mx-auto" style="width: 80px; height: 3px; background: #0d6efd; opacity: 0.8;">
+      </div>
+
+      <!-- Breve historia -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <h4 class="fw-bold mb-3 text-primary">Nuestra historia</h4>
+
+          <!-- Texto corto -->
+          <div class="historia-texto corto">
+            <p class="text-justify">
+              CoderHub.run nació en 2022 como un pequeño grupo de jóvenes apasionados por la tecnología y el desarrollo de software en Colombia. Todo comenzó en un espacio de coworking donde tres amigos —con diferentes perfiles en programación, diseño y gestión— compartían la misma visión: crear soluciones digitales innovadoras que ayudaran a las empresas a crecer en un mundo cada vez más conectado.
+            </p>
+          </div>
+
+          <!-- Texto completo (oculto al inicio) -->
+          <div class="historia-texto completo d-none">
+            <p class="text-justify">
+              Con esfuerzo, dedicación y creatividad, los primeros proyectos fueron páginas web para pequeños negocios locales, los cuales rápidamente empezaron a recomendar sus servicios por la calidad y compromiso del equipo.
+            </p>
+            <p class="text-justify">
+              Ese impulso motivó a los fundadores a consolidarse como una casa de desarrollo de software con identidad propia, marcando la diferencia a través de la confianza, la innovación y la cercanía con los clientes.
+            </p>
+            <p class="text-justify">
+              Hoy, CoderHub.run se posiciona como una marca emergente en el mercado tecnológico, ofreciendo soluciones que van desde el desarrollo web y aplicaciones móviles, hasta consultoría y soporte especializado.
+            </p>
+          </div>
+
+          <!-- Botón -->
+          <button id="toggleHistoria" class="btn btn-outline-primary btn-sm mt-2">Ver más</button>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <img src="https://woxi.digital/wp-content/uploads/2022/05/colleagues-giving-fist-bump-768x367.jpg"
+            alt="Nuestra historia" class="img-fluid rounded shadow-lg border border-3 border-light">
+        </div>
+      </div>
+
+      <!-- Misión, Visión, Valores -->
+      <div class="row text-center mb-5 tarjetas">
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex justify-content-center align-items-center p-4 mision"></div>
+              <div class="flip-card-back p-3">
+                <h5 class="fw-bold text-primary">Misión</h5>
+                <p>En CoderHub.run tenemos el propósito de transformar ideas en soluciones tecnológicas de alto impacto.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex justify-content-center align-items-center p-4 vision"></div>
+              <div class="flip-card-back p-3">
+                <h5 class="fw-bold text-primary">Visión</h5>
+                <p>Queremos consolidarnos como un aliado estratégico, destacándonos por innovación y compromiso con la transformación digital.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front d-flex justify-content-center align-items-center p-4 valores"></div>
+              <div class="flip-card-back p-3 text-start">
+                <h5 class="fw-bold text-primary">Valores</h5>
+                <ul class="list-unstyled">
+                  <li><strong>Innovación:</strong> buscamos constantemente nuevas formas de crear y mejorar soluciones.</li>
+                  <li><strong>Compromiso:</strong> trabajamos con dedicación para cumplir con las expectativas.</li>
+                  <li><strong>Transparencia:</strong> actuamos con ética y honestidad.</li>
+                  <li><strong>Trabajo en equipo:</strong> creemos en la colaboración como base del éxito.</li>
+                  <li><strong>Calidad:</strong> desarrollamos con altos estándares.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- EQUIPO -->
+      <section class="container py-5">
+        <div class="text-center mb-4">
+          <h4 class="fw-bold text-primary">Nuestro equipo</h4>
+          <p class="text-muted">Conoce a las personas detrás de CoderHub.run</p>
+        </div>
+
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card shadow-lg border-0 team-card">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">Carlos Ramírez</h5>
+                  <p class="text-primary">CEO & Fundador</p>
+                  <p>Apasionado por la innovación y la estrategia.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card shadow-lg border-0 team-card">
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">María Torres</h5>
+                  <p class="text-primary">Full Stack Dev</p>
+                  <p>Especialista en soluciones web y móviles.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="card shadow-lg border-0 team-card">
+                <img src="https://randomuser.me/api/portraits/men/12.jpg" class="card-img-top">
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-bold">Andrés López</h5>
+                  <p class="text-primary">Diseñador UI/UX</p>
+                  <p>Enfocado en experiencias digitales atractivas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Botones -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="../js/about-me.js"></script>
+</body>
+</html>
