@@ -1,25 +1,21 @@
 *{
     margin: 0;
 }
+html{
+  width: 100%;
+}
 body{
     background-color: rgb(255, 255, 255);
 }
 
 header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-      transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-nav{
-    width: 100%;
-    color: white;
-    font-size: 1.2rem;
-    height: 12vh;
-    background-color: rgb(255, 0, 0);
+nav {
+  width: 100vw;
+  font-size: 1.2rem;
+  height: 12vh;
 }
 
 .navbar{
@@ -28,8 +24,6 @@ nav{
   -webkit-backdrop-filter: blur(10px); 
   
 }
-
-
 
 .navbar-collapse .nav-link {
   color: #000; 
@@ -228,6 +222,9 @@ input:checked + label .description {
   width: 80%;
   margin-bottom: 20px;
 }
+nav{
+  height: auto;
+}
 
 }
 
@@ -264,5 +261,12 @@ input:checked + label .description {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 1rem;
   border-radius: 0.5rem;
+}
+.nav{
+  max-width: 100%;
+  height: auto;
+}
+.navbar{
+  max-width: 100%;
 }
 }
