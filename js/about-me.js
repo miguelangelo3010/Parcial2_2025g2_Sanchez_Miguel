@@ -1,16 +1,16 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: "auto", 
-  spaceBetween: 10,       
-  loop: true,
+  slidesPerView: 1, 
+  spaceBetween: 30,  
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  centeredSlides: true 
 });
 
 
 
-    const boton = document.getElementById("toggleHistoria");
+  const boton = document.getElementById("toggleHistoria");
   const corto = document.querySelector(".historia-texto.corto");
   const completo = document.querySelector(".historia-texto.completo");
 

@@ -11,7 +11,9 @@ header{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+      transition: all 0.3s ease;
 }
+
 nav{
     width: 100%;
     color: white;
@@ -26,20 +28,35 @@ nav{
   -webkit-backdrop-filter: blur(10px); 
   
 }
+
+.navbar-collapse {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.navbar-collapse .nav-link {
+  color: #000; 
+}
+
+.navbar-collapse .nav-link:hover {
+  background-color: #f0f0f0;
+  border-radius: 0.3rem;
+}
+
 .nav-item{
 color: white;
 }
-
 
 .logo{
   width: 50px;
   height: 50px;
   margin-right: 20px;
 }
+
 .titulo {
   font-size: 2rem; 
 }
-
 
 .btn-gradient {
   background: linear-gradient(0deg, #007bff, #00c6ff);
@@ -92,141 +109,65 @@ color: white;
   z-index: 1;
 }
 
-
-
 .textoP{
   width: 45vw;
   font-size: 1.7rem;
     text-shadow: 1px 1px 2px greenyellow;
 }
+
 .txtBienvenido{
   font-size: 3rem;
   text-shadow: 2px 2px 8px rgb(0, 81, 255);
   color: rgb(255, 255, 255);
 }
 
-
-
-/* Servicios */
-
-/* Wrapper */
-.wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+#services{
+  margin-top: 12vh;
 }
 
-.services-container {
-  height: 400px;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
+.nosotrosimg{
+  height: 40vh;
 }
 
-/* Cards */
-.service-card {
-  width: 80px;
-  border-radius: 2rem;
-  cursor: pointer;
-  overflow: hidden;
-  margin: 0 10px;
-  display: flex;
-  align-items: flex-end;
-  transition: .6s cubic-bezier(.28,-0.03,0,.99);
-  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+#about-me{
+  background: linear-gradient(to bottom, #000000, #ffffff);
+  color: #fff;
+}
+
+.txtconocenos{
+  font-size: 2rem;
+  text-shadow: 2px 2px 8px rgb(0, 81, 255);
+  color: rgb(255, 255, 255);
+}
+
+.lead{
   color: #000000;
-  position: relative;
+  font-size: 1.7rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-
-.service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5; 
-  z-index: 0;
-  transition: opacity 0.3s ease;
+#services{
+  background: linear-gradient(to bottom, #3d3e3f90, #969b9f9b, #ffffff);
+  color: #fff;
+}
+#portafolio{
+  background: linear-gradient(to bottom, #3d3e3f90, #969b9f9b, #ffffff);
+  color: #fff;
+  margin-top: 12vh;
+}
+#contacto{
+  background: linear-gradient(to bottom, #ffffff, #969b9f9b, #4d4d4d);
+  color: #fff;
 }
 
-.service-card > .row {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  align-items: center;
-  position: relative; 
-  z-index: 1;
+.card {
+  transition: all 0.3s ease-in-out; 
+  border-radius: 10px;
 }
 
-/* Icono */
-.service-card > .row > .icon {
-  background: rgba(0,0,0,0.6);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 15px;
+.card:hover {
+  transform: scale(1.11);
 }
-
-/* Descripción */
-.service-card > .row > .description {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  height: 80px;
-  width: 400px;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all .3s ease;
-}
-
-.service-card .description p {
-  color: #000000;
-  padding-top: 5px;
-  font-size: 0.9rem;
-}
-
-.service-card .description h4 {
-  text-transform: uppercase;
-  font-size: 1.2rem;
-  margin: 0;
-  color: #000000;
-}
-
-/* Radio Inputs */
-input {
-  display: none;
-}
-
-/* Animación al expandir */
-input:checked + label {
-  width: 500px;
-}
-
-input:checked + label .description {
-  opacity: 1 !important;
-  transform: translateY(0) !important;
-}
-
-/* Fondos personalizados (ahora aplicados en ::before) */
-.service-card[for="s1"]::before {
-  background-image: url('../img/web.jpg');
-}
-.service-card[for="s2"]::before {
-  background-image: url('../img/movil.webp');
-}
-.service-card[for="s3"]::before {
-  background-image: url('../img/consultoria.jpg');
-}
-.service-card[for="s4"]::before {
-  background-image: url('../img/soporte.webp');
-}
-
-
 
 @media (max-width: 991px) {
   .team-card img { height: 200px; }
@@ -244,32 +185,29 @@ input:checked + label .description {
     align-items: center;  
   }
 
-  /* Altura base */
-.service-card {
-  width: 80px;
-  border-radius: 1rem;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  overflow: hidden;
-  border-radius: 2rem;
-  margin: 0 10px;
-  display: flex;
-  align-items: center;
-  transition: 
-    width .6s cubic-bezier(.28,-0.03,0,.99),
-    height .6s cubic-bezier(.28,-0.03,0,.99); 
-  box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
-  color: #fff;
-}
+  .service-card {
+    width: 80px;
+    border-radius: 1rem;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: 
+      width .6s cubic-bezier(.28,-0.03,0,.99),
+      height .6s cubic-bezier(.28,-0.03,0,.99); 
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    color: #fff;
+  }
 
-/* Expandir en ancho y alto */
 input:checked + label {
   width: 500px;
   height: 280px; 
 }
 
-/* Mostrar la descripción cuando se expanda */
 input:checked + label .description {
   opacity: 1 !important;
   transform: translateY(0) !important;
@@ -288,12 +226,16 @@ input:checked + label .description {
   .service-card > .row > .description {
     width: 100%; 
   }
-    .service-card .description p {
+
+  .service-card .description p {
 
   width: 80%;
   margin-bottom: 20px;
 }
+
 }
+
+
 @media (max-width: 575px) {
   .team-card { max-width: 90%; } 
   .team-card img { height: 180px; }
